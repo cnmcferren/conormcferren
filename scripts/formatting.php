@@ -1,11 +1,12 @@
 <?php
 
     function formatBlock($title, $date, $location, $description) {
+        echo "<div class='experienceBubble'>";
         echo "<div class='titles'>" . $title . "</div>";
-        echo "<div class='titles'>" . $location . "</div>";
-        echo "<div class='titles'>" . $date . "</div>";
+        echo "<div class='subtitles'>" . $location . "</div>";
+        echo "<div class='subtitles'>" . $date . "</div>";
         echo "<div class='info'>" . $description . "</div>";
-    
+        echo "</div>";
         echo "<br><br>";
     }
     function printExperience() {

@@ -22,6 +22,6 @@
 }
 
 .floatingmenu button:hover {
-    background-color: var(--primary1);
-    color: var(--secondary2);
+    background-color: var(--secondary4);
+    color: var(--secondary1);
 }

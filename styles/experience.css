@@ -40,10 +40,24 @@
     font-size: 1.2em;
 }
 
-.experience .experienceInfo .titles {
+.experience .experienceInfo .experienceBubble {
+    background-color: var(--primary1);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0.5em 0.5em 0.5em rgb(197,197,197);
+}
+
+.experience .experienceInfo .experienceBubble .titles {
+    color: var(--secondary2);
     font-weight: 700;
 }
 
-.experience .experienceInfo .info {
+.experience .experienceInfo .experienceBubble .subtitles {
+    font-weight: 700;
+}
+
+.experience .experienceInfo .experienceBubble .info {
     font-weight: 200;
 }
