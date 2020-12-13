@@ -1,0 +1,49 @@
+.experience {
+    width: 100%;
+    height: auto;
+    background-color: var(--secondary5);
+
+    padding-top: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+
+    font-family: var(--primaryfont);
+}
+
+.experience hr {
+    height: 1px;
+    width: 60%;
+    border-color: var(--secondary3);
+    background-color: var(--secondary3);
+}
+
+.experience .experienceTitle {
+    color: var(--secondary2);
+    font-family: var(--primaryfont);
+    position: relative;
+    font-weight: 1000;
+    margin-top: 1em;
+    font-size: 2.5em;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+}
+
+.experience .experienceInfo {
+    margin-top: 2em;
+    width: 40%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+}
+
+.experience .experienceInfo .titles {
+    font-weight: 700;
+}
+
+.experience .experienceInfo .info {
+    font-weight: 200;
+}

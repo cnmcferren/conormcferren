@@ -1,0 +1,27 @@
+.floatingmenu {
+    overflow: hidden;
+    background-color: var(--secondary3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    font-family: var(--primaryfont);
+}
+
+.floatingmenu button {
+    text-decoration: none;
+    border: none;
+    float: left;
+    display: block;
+    background-color: var(--secondary3);
+    color: var(--secondary5);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.floatingmenu button:hover {
+    background-color: var(--primary1);
+    color: var(--secondary2);
+}
