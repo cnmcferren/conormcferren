@@ -64,7 +64,7 @@
                 <a href="https://linkedin.com/in/w-conor-mcferren">LinkedIn</a><br><br>
                 <a href="https://instagram.com/cnmcferren">Instagram</a><br><br>
                 <a href="https://www.qrz.com/db/kn4sit">QRZ</a><br><br>
-                <a href="mailto: cnmcferren@gmail.com">Email</a><br><br>
+                <a href="mailto:cnmcferren@gmail.com">Email</a><br><br>
             </div>
         </div>
     </body>
