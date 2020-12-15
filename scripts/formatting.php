@@ -1,24 +1,28 @@
 <?php
 
-    function formatBlock($title, $date, $location, $description) {
-        echo "<div class='experienceBubble'>";
-        echo "<div class='titles'>" . $title . "</div>";
-        echo "<div class='subtitles'>" . $location . "</div>";
-        echo "<div class='subtitles'>" . $date . "</div>";
-        echo "<div class='info'>" . $description . "</div>";
+    function formatBlock($title, $date, $location, $description, $imageRef) {
+        echo "<div class='flipcard'>";
+        echo "<div class='flipcard-inner'>";
+        echo "<div class='flipcard-front' style='background-image:url(" . $imageRef . ")'>";
+        echo "<h1>" . $title . "</h1>";
+        echo "<h2>" . $location . "</h2>";
         echo "</div>";
-        echo "<br><br>";
+        echo "<div class='flipcard-back'>";
+        echo "<div style='font-weight:700'>" . $date . "</div><br>";
+        echo "<div>" . $description . "</div>";
+        echo "</div>";
+        echo "</div></div>";
     }
     function printExperience() {
         include "dbconnect.php";
         $conn = connectDatabase();
 
-        $sql = "SELECT title, timePeriod, location, description FROM experience";
+        $sql = "SELECT title, imageRef, timePeriod, location, description FROM experience";
         $result = $conn->query($sql);
 
         if ($result->num_rows> 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                formatBlock($row["title"], $row["timePeriod"], $row["location"], $row["description"]);
+                formatBlock($row["title"], $row["timePeriod"], $row["location"], $row["description"], $row["imageRef"]);
             }
         }
 
