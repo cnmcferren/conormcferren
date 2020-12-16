@@ -3,13 +3,18 @@
 <html lang="en">
     <head>
         <title>W. Conor McFerren</title>
+
         <meta charset='utf-8' content="width=device-width, initial-scale=1">
+        <meta name="author" content="W. Conor McFerren">
+        <meta name="description" content="From GPU Programming to Ham Radio, jump into my interactive resume to learn more about me, W. Conor McFerren">
+
         <link rel="stylesheet" href="styles/colors.css">
         <link rel="stylesheet" href="styles/landing.css">
         <link rel="stylesheet" href="styles/aboutme.css">
         <link rel="stylesheet" href="styles/experience.css">
         <link rel="stylesheet" href="styles/contactme.css">
         <link rel="stylesheet" href="styles/menu.css">
+
         <script src="scripts/nav.js"></script> 
     </head>
     <body>
