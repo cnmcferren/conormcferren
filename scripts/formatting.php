@@ -1,5 +1,6 @@
 <?php
     include "dbconnect.php";
+    $GLOBALS["dbconnection"] = connectDatabase();
 
     function formatExperienceBlock($title, $date, $location, $description, $imageRef) {
         echo "<div class='flipcard'>";
@@ -29,24 +30,18 @@
         echo "</td>";
     }
     function printExperience() {
-        $conn = connectDatabase();
-
         $sql = "SELECT title, imageRef, timePeriod, location, description FROM experience";
-        $result = $conn->query($sql);
+        $result = $GLOBALS["dbconnection"]->query($sql);
 
         if ($result->num_rows> 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 formatExperienceBlock($row["title"], $row["timePeriod"], $row["location"], $row["description"], $row["imageRef"]);
             }
         }
-
-        closeDatabase($conn);
     }
     function printSkills() {
-        $conn = connectDatabase();
-
         $sql = "SELECT title, rating FROM skills";
-        $result = $conn->query($sql);
+        $result = $GLOBALS["dbconnection"]->query($sql);
 
         if ($result->num_rows > 0) {
             echo "<table>";
@@ -67,10 +62,8 @@
 
     }
     function printTools() {
-        $conn = connectDatabase();
-
         $sql = "SELECT title, rating FROM tools";
-        $result = $conn->query($sql);
+        $result = $GLOBALS["dbconnection"]->query($sql);
 
         if ($result->num_rows > 0) {
             echo "<table>";
@@ -90,10 +83,8 @@
         }
     }
     function printLanguages() {
-        $conn = connectDatabase();
-
         $sql = "SELECT title, rating FROM languages";
-        $result = $conn->query($sql);
+        $result = $GLOBALS["dbconnection"]->query($sql);
 
         if ($result->num_rows > 0) {
             echo "<table>";
@@ -111,5 +102,9 @@
             }
             echo "</table>";
         }
+    }
+
+    function closeConnection() {
+        closeDatabase($GLOBALS["dbconnection"]);
     }
 ?>

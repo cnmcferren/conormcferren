@@ -99,5 +99,8 @@
                 <a href="mailto:cnmcferren@gmail.com">Email</a><br><br>
             </div>
         </div>
+        <?php
+            closeDatabase();
+        ?>
     </body>
 </html>
