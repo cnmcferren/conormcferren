@@ -1,0 +1,78 @@
+.abilities {
+    width: 100%;
+    background-color: var(--primary1);
+
+    padding-top: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin-bottom: 0em;
+
+    font-family: var(--primaryfont)
+}
+
+.abilities hr {
+    border: none;
+    height: 1px;
+    width: 60%;
+    background-color: var(--secondary3);
+}
+
+.abilities .abilitiesTitle {
+    color: var(--secondary2);
+    font-family: var(--primaryfont);
+    position: relative;
+    font-weight: 1000;
+    margin-top: 1em;
+    font-size: 2.5em;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+}
+
+.abilities .abilitiesSubtitles {
+    color: var(--secondary2);
+    font-family: var(--primaryfont);
+    position: relative;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+    font-size: 1.75em;
+    text-align: left;
+}
+
+.abilities .skills {
+    width: 70%;
+    margin: auto;
+}
+
+.abilities table {
+    margin-top: 0em;
+    padding-bottom: 2em;
+    width: 100%;
+    font-size: 95%;
+}
+
+.abilities table td {
+    width: 50%;
+    transition: transform 0.2s;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 1em;
+}
+.abilities table td:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary6);
+    box-shadow: 0.3em 0.3em 0.5em rgb(70, 70, 70);
+}
+
+.filled {
+    color: var(--secondary2);
+}
+
+.empty {
+    color: var(--secondary3);
+}
