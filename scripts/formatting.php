@@ -59,6 +59,9 @@
             }
             echo "</table>";
         }
+        else {
+            echo "Oops! Something went wrong! Please check back at a later time to see these skills.";
+        }
 
     }
     function printTools() {
@@ -81,6 +84,9 @@
             }
             echo "</table>";
         }
+        else {
+            echo "Oops! Something went wrong! Please check back at a later time to see these tools.";
+        }
     }
     function printLanguages() {
         $sql = "SELECT title, rating FROM languages";
@@ -101,6 +107,9 @@
                 $count = $count + 1;
             }
             echo "</table>";
+        }
+        else {
+            echo "Oops! Something went wrong! Please check back at a later time to see these languages.";
         }
     }
 
