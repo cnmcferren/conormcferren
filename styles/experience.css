@@ -11,9 +11,9 @@
 }
 
 .experience hr {
+    border: none;
     height: 1px;
     width: 60%;
-    border-color: var(--secondary3);
     background-color: var(--secondary3);
 }
 
