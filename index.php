@@ -12,16 +12,22 @@
         <link rel="stylesheet" href="styles/landing.css">
         <link rel="stylesheet" href="styles/aboutme.css">
         <link rel="stylesheet" href="styles/experience.css">
+        <link rel="stylesheet" href="styles/abilities.css">
         <link rel="stylesheet" href="styles/contactme.css">
         <link rel="stylesheet" href="styles/menu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script src="scripts/nav.js"></script> 
     </head>
     <body>
+        <?php
+            include "scripts/formatting.php";
+        ?>
         <div class="floatingmenu">
             <button type="button" onclick="smoothScroll(document.getElementById('title'))">Home</button>
             <button type="button" onclick="smoothScroll(document.getElementById('aboutme'))">About</button>
             <button type="button" onclick="smoothScroll(document.getElementById('experience'))">Experience</button>
+            <button type="button" onclick="smoothScroll(document.getElementById('abilities'))">Abilities</button>
             <button type="button" onclick="smoothScroll(document.getElementById('contactme'))">Contact</button>
             <button type="button" style="float:right" onclick="location.href='images/WConorMcFerren.pdf'">Resume</button>
         </div>
@@ -57,9 +63,30 @@
             <hr>
             <div class="experienceInfo">
                 <?php
-                    include "scripts/formatting.php";
                     printExperience();
                 ?>
+            </div>
+        </div>
+        <div class="abilities" id="abilities">
+            <div class="abilitiesTitle">Abilities</div>
+            <hr>
+            <div class="abilitiesInfo">
+                <div class="skills">
+                    <div class="abilitiesSubtitles">Skills</div>
+                    <?php
+                        printSkills();
+                    ?>
+                    <hr>
+                    <div class="abilitiesSubtitles">Tools</div>
+                    <?php
+                        printTools();
+                    ?>
+                    <hr>
+                    <div class="abilitiesSubtitles">Languages</div>
+                    <?php
+                        printLanguages();
+                    ?>
+                </div>
             </div>
         </div>
         <div class="contactme" id="contactme">
