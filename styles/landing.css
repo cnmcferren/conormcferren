@@ -42,10 +42,10 @@ body, html {
 }
 
 .title hr {
-    height: 1px;
+    height: 3px;
     width: 100%;
-    border-color: var(--secondary1);
-    background-color: var(--secondary1);
+    border: none;
+    background-color: var(--secondary3);
 }
 
 .title button {
