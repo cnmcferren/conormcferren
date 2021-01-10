@@ -3,17 +3,13 @@
     $GLOBALS["dbconnection"] = connectDatabase();
 
     function formatExperienceBlock($title, $date, $location, $description, $imageRef) {
-        echo "<div class='flipcard'>";
-        echo "<div class='flipcard-inner'>";
-        echo "<div class='flipcard-front' style='background-image:url(" . $imageRef . ")'>";
-        echo "<h1>" . $title . "</h1>";
-        echo "<h2>" . $location . "</h2>";
-        echo "</div>";
-        echo "<div class='flipcard-back'>";
-        echo "<div style='font-weight:700'>" . $date . "</div><br>";
-        echo "<div>" . $description . "</div>";
-        echo "</div>";
-        echo "</div></div>";
+        echo "<a href='construction.html'><div class='experienceBubble'>";
+        echo "<div class='experienceSubtitle'>" . $title . "</div>";
+        echo "<div class='experienceLocation'>" . $location . "</div>";
+        echo "<div class='experienceDate'>" . $date . "</div>";
+        echo "<div class='experienceDescription'>" . $description . "</div>";
+
+        echo "</div></a>";
     }
     function formatSkillsBlock($title, $rating) {
         echo "<td>";
