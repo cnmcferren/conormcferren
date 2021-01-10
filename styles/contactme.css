@@ -11,9 +11,9 @@
 }
 
 .contactme hr {
+    border: none;
     height: 1px;
     width: 60%;
-    border-color: var(--secondary4);
     background-color: var(--secondary4);
 }
 
@@ -45,9 +45,37 @@
 }
 .contactme .contactInfo a {
     text-decoration: none;
+    font-size: 1.1em;
+    color: var(--secondary4);
+}
+
+.contactme .contactInfo li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.contactme .contactInfo ul {
+    list-style-type: none;
+    text-align: left;
+    width: 30%;
+    margin: auto;
+}
+
+.contactme .contactInfo img {
+    height: 1.2em;
     color: var(--secondary4);
 }
 
 .contactme .contactInfo a:hover{
     color: var(--secondary5);
+}
+
+.contactme .copyright {
+    padding-top: 5em;
+    padding-bottom: 2em;
+    font-weight: 500;
+    font-size: 70%;
+    color: var(--secondary4);
+    text-align: center;
+    letter-spacing: 2px;
 }
