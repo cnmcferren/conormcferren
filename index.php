@@ -5,8 +5,19 @@
         <title>W. Conor McFerren</title>
 
         <meta charset='utf-8' content="width=device-width, initial-scale=1">
-        <meta name="author" content="W. Conor McFerren">
+        <meta name="author" content="W. Conor McFerren - Official Site">
         <meta name="description" content="From GPU Programming to Ham Radio, jump into my interactive resume to learn more about me, W. Conor McFerren">
+        <meta name="language" content="english"> 
+        <meta http-equiv="content-type" content="text/html">
+        <meta name="author" content="W. Conor McFerren">
+        <meta name="designer" content="W. Conor McFerren">
+        <meta name="publisher" content="W. Conor McFerren">
+        <meta name="keywords" content="Software Engineer,Ham Radio,Developer,Computer Scientist">
+        <meta property="og:title" content="W. Conor McFerren - Official Site" />
+        <meta property="og:url" content="https://www.conormcferren.com" />
+        <meta property="og:image" content="https://www.conormcferren.com/images/mesa.JPG" />
+        <meta property="og:description" content="From GPU Programming to Ham Radio, jump into my interactive resume to learn more about me, W. Conor McFerren" />
+
 
         <link rel="stylesheet" href="styles/colors.css">
         <link rel="stylesheet" href="styles/landing.css">
@@ -101,7 +112,7 @@
                 </ul>
             </div>
             <div class="copyright">
-                Copyright &copy W. Conor McFerren. All Rights Reserved.
+                Copyright &copy 2021 W. Conor McFerren. All Rights Reserved.
             </div>
         </div>
         <?php
