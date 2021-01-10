@@ -7,6 +7,7 @@
         echo "<img src='" . $imageRef ."' alt='some image'>";
         echo "<div class='experienceSubtitle'>" . $title . "</div>";
         echo "<div class='experienceText'>" . $description . "</div>";
+        echo "<div class='experienceLink'>Click here to read more</div>";
 
         echo "</div></a>";
     }

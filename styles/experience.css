@@ -84,3 +84,11 @@
     font-size: 80%;
     font-weight: 500;
 }
+
+.experience .experienceInfo .experienceBubble .experienceLink {
+    margin-top: 1em;
+    bottom: 0;
+    color: var(--secondary4);
+    font-size: 80%;
+    position: relative;
+}
