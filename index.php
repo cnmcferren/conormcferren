@@ -93,14 +93,19 @@
             <div class="contactmeTitle">Contact Information</div>
             <hr>
             <div class="contactInfo">
-                <a href="https://linkedin.com/in/w-conor-mcferren">LinkedIn</a><br><br>
-                <a href="https://instagram.com/cnmcferren">Instagram</a><br><br>
-                <a href="https://www.qrz.com/db/kn4sit">QRZ</a><br><br>
-                <a href="mailto:cnmcferren@gmail.com">Email</a><br><br>
+                <ul>
+                    <li><a href="https://linkedin.com/in/w-conor-mcferren"><img src="images/contactme/linkedin.svg" alt="LinkedIn"> LinkedIn</a></li>
+                    <li><a href="https://instagram.com/cnmcferren"><img src="images/contactme/instagram.svg" alt="Instagram"> Instagram</a></li>
+                    <li><a href="https://www.qrz.com/db/kn4sit"><img src="images/contactme/radio.svg" alt="QRZ"> QRZ</a></li>
+                    <li><a href="mailto:cnmcferren@gmail.com"><img src="images/contactme/email.svg" alt="Email"> Email</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                Copyright &copy W. Conor McFerren. All Rights Reserved.
             </div>
         </div>
         <?php
-            closeDatabase();
+            closeConnection();
         ?>
     </body>
 </html>
