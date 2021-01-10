@@ -21,10 +21,10 @@ CREATE TABLE languages (
     rating INT
 );
 
-INSERT INTO experience(link) VALUES ("ssrl.php");
-INSERT INTO experience(link) VALUES ("lockheedmartin.php");
-INSERT INTO experience(link) VALUES ("astrophysics-researcher.php");
-INSERT INTO experience(link) VALUES ("onecardoffice.php");
+INSERT INTO experience(link) VALUES ("https://www.conormcferren.com/ssrl.php");
+INSERT INTO experience(link) VALUES ("https://www.conormcferren.com/lockheedmartin.php");
+INSERT INTO experience(link) VALUES ("https://www.conormcferren.com/astrophysics-researcher.php");
+INSERT INTO experience(link) VALUES ("https://www.conormcferren.com/onecardoffice.php");
 
 INSERT INTO skills(title, rating) VALUES ("C++", 5);
 INSERT INTO skills(title, rating) VALUES ("C", 5);
