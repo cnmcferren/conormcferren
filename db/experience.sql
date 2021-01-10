@@ -21,6 +21,13 @@ CREATE TABLE languages (
     rating INT
 );
 
+CREATE TABLE experiencePages (
+    id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    title TEXT,
+    date TEXT,
+    description TEXT
+);
+
 INSERT INTO experience(link) VALUES ("https://www.conormcferren.com/ssrl.php");
 INSERT INTO experience(link) VALUES ("https://www.conormcferren.com/lockheedmartin.php");
 INSERT INTO experience(link) VALUES ("https://www.conormcferren.com/astrophysics-researcher.php");
@@ -72,3 +79,5 @@ INSERT INTO tools(title, rating) VALUES ("Gpredict", 4);
 
 INSERT INTO languages(title, rating) VALUES ("English", 5);
 INSERT INTO languages(title, rating) VALUES ("German (Elementary)", 3);
+
+INSERT INTO experiencePages(title, date, description) VALUES ("Simulation Manager and MOCI Mission Operations Team Lead", "April 2018 - Present", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
