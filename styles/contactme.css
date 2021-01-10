@@ -52,13 +52,16 @@
 .contactme .contactInfo li {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    width: fit-content;
 }
 
 .contactme .contactInfo ul {
     list-style-type: none;
     text-align: left;
-    width: 30%;
+    white-space: nowrap;
+    overflow: visible;
     margin: auto;
+    width: 10em;
 }
 
 .contactme .contactInfo img {
