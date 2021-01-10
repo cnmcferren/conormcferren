@@ -2,12 +2,11 @@
     include "dbconnect.php";
     $GLOBALS["dbconnection"] = connectDatabase();
 
-    function formatExperienceBlock($title, $date, $location, $description, $imageRef) {
-        echo "<a href='construction.html'><div class='experienceBubble'>";
+    function formatExperienceBlock($title, $description, $url, $imageRef) {
+        echo "<a href='" . $url . "'><div class='experienceBubble'>";
+        echo "<img src='" . $imageRef ."' alt='some image'>";
         echo "<div class='experienceSubtitle'>" . $title . "</div>";
-        echo "<div class='experienceLocation'>" . $location . "</div>";
-        echo "<div class='experienceDate'>" . $date . "</div>";
-        echo "<div class='experienceDescription'>" . $description . "</div>";
+        echo "<div class='experienceText'>" . $description . "</div>";
 
         echo "</div></a>";
     }
@@ -26,12 +25,13 @@
         echo "</td>";
     }
     function printExperience() {
-        $sql = "SELECT title, imageRef, timePeriod, location, description FROM experience";
+        $sql = "SELECT link FROM experience";
         $result = $GLOBALS["dbconnection"]->query($sql);
 
         if ($result->num_rows> 0) {
             while ($row = mysqli_fetch_assoc($result)) {
-                formatExperienceBlock($row["title"], $row["timePeriod"], $row["location"], $row["description"], $row["imageRef"]);
+                $data = getOpenGraphData($row["link"]);
+                formatExperienceBlock($data[0], $data[2], $data[3], $data[4]);
             }
         }
     }
