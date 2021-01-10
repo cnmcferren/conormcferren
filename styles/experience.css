@@ -49,6 +49,7 @@
 .experience .experienceInfo .experienceBubble {
     border-style: solid;
     border-radius: 2em;
+    border-color: var(--secondary3);
     background-color: var(--primary1);
     margin-bottom: 1em;
     transition: transform 0.2s;
