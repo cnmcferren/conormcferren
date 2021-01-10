@@ -15,7 +15,7 @@
         <meta name="keywords" content="Software Engineer,Ham Radio,Developer,Computer Scientist">
         <meta property="og:title" content="Small Satellite Research Laboratory" />
         <meta property="og:url" content="https://www.conormcferren.com/ssrl.php" />
-        <meta property="og:image" content="https://www.conormcferren.com/images/spoc.JPG" />
+        <meta property="og:image" content="https://www.conormcferren.com/images/experiences/spoc.JPG" />
         <meta property="og:description" content="Learn about my work with the UGA Small Satellite Research Laboratory." />
 
 

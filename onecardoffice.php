@@ -15,7 +15,7 @@
         <meta name="keywords" content="Software Engineer,Ham Radio,Developer,Computer Scientist">
         <meta property="og:title" content="UGA Card Office Lead Photography and ID Technician" />
         <meta property="og:url" content="https://www.conormcferren.com/onecardoffice.php" />
-        <meta property="og:image" content="https://www.conormcferren.com/images/uga.jpg" />
+        <meta property="og:image" content="https://www.conormcferren.com/images/experiences/uga.jpg" />
         <meta property="og:description" content="Explore my 4 years I have spent as an employee of the University of Georgia." />
 
 

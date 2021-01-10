@@ -15,7 +15,7 @@
         <meta name="keywords" content="Software Engineer,Ham Radio,Developer,Computer Scientist">
         <meta property="og:title" content="Skunk Works Intern" />
         <meta property="og:url" content="https://www.conormcferren.com/lockheedmartin.php" />
-        <meta property="og:image" content="https://www.conormcferren.com/images/f35lightning.jpg" />
+        <meta property="og:image" content="https://www.conormcferren.com/images/experiences/f35lightning.jpg" />
         <meta property="og:description" content="Read about my time that I spent working in Fort Worth as a Skunk Works Intern." />
 
 

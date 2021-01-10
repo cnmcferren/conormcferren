@@ -15,7 +15,7 @@
         <meta name="keywords" content="Software Engineer,Ham Radio,Developer,Computer Scientist">
         <meta property="og:title" content="Physics & Astronomy Researcher" />
         <meta property="og:url" content="https://www.conormcferren.com/astrophysics-researcher.php" />
-        <meta property="og:image" content="https://www.conormcferren.com/images/stars.jpg" />
+        <meta property="og:image" content="https://www.conormcferren.com/images/experiences/stars.jpg" />
         <meta property="og:description" content="Dive into my research as an Intern in the University of Georgia Department of Physics & Astronomy" />
 
 
