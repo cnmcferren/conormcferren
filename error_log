@@ -1,2 +1,0 @@
-[10-Dec-2020 22:08:42 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/conormcf/public_html/scripts/dbconnect.php on line 8
-[10-Dec-2020 22:14:34 America/Boise] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'conormcf_root'@'localhost' to database 'experience' in /home1/conormcf/public_html/scripts/dbconnect.php on line 8

@@ -1,2 +1,3 @@
-scripts/dbconnect.php
+.DS_Store
+credentials.txt
 .htaccess
