@@ -1,0 +1,91 @@
+<style>
+    .aboutme {
+        width: 100%;
+        background-color: var(--primary1);
+
+        padding-top: 2em;
+        margin-left: 0em;
+        margin-right: 0em;
+
+        font-family: var(--primaryfont)
+    }
+
+    .aboutme hr {
+        border: none;
+        height: 1px;
+        width: 60%;
+        background-color: var(--secondary3);
+    }
+
+    .aboutme .aboutmeTitle {
+        color: var(--secondary2);
+        font-family: var(--primaryfont);
+        position: relative;
+        font-weight: 1000;
+        margin-top: 1em;
+        font-size: 2.5em;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 60%;
+    }
+
+    .aboutme .flexbox {
+        width: 80%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .aboutme .flexbox > div {
+        color: var(--secondary3);
+        margin: 3%;
+        width: 30%;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+        font-weight: 500;
+        font-size: 90%;
+
+        letter-spacing: 2px;
+    }
+
+    .aboutme .flexbox .infoHeaders {
+        font-weight: 900;
+    }
+    .aboutme .flexbox .profilePhoto {
+        border-radius: 50%;
+        width: 90%;
+        position: relative;
+        border: 10px solid var(--secondary4);
+    }
+
+    .aboutme .flexbox .aboutmeHeaders {
+        font-size: 140%;
+        font-weight: 1000;
+        margin-bottom: 1em;
+        color: var(--secondary2);
+    }
+</style>
+
+<div class="aboutme" id="aboutme">
+    <div class="aboutmeTitle">About Me</div>
+    <hr>
+    <div class="flexbox">
+        <div>
+            <div class="aboutmeHeaders">Biography</div>
+            <div>I am a Computer Science Major with a love for radios and military technology. Currently serving as the Mission Operations Team Lead for the MOCI Satellite at the University of Georgia's Small Satellite Research Laboratory, I have experience with Ground Station and RF communications by using Software Defined Radio and Hardware Defined Radio. Along with this, I have experience with System Testing from conception to execution, Orbital Simulation and Analysis, and Threat Detection, among many other things.</div>
+        </div>
+        <div><img class="profilePhoto" src="{{url_for('static', filename='images/profilePhoto.jpg')}}" alt="Profile Photo"></div>
+        <div>
+            <div class="aboutmeHeaders">Details</div>
+            <div class="infoHeaders">Name:</div>
+            <div>William Conor McFerren</div><br>
+            <div class="infoHeaders">Age:</div>
+            <div>21 Years</div><br>
+            <div class="infoHeaders">Location:</div>
+            <div>Athens, Georgia, United States of America</div>
+        </div>
+    </div>
+</div>

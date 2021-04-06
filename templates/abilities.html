@@ -1,0 +1,152 @@
+<style>
+    .abilities {
+        width: 100%;
+        background-color: var(--primary1);
+
+        padding-top: 2em;
+        margin-left: 0em;
+        margin-right: 0em;
+        margin-bottom: 0em;
+
+        font-family: var(--primaryfont)
+    }
+
+    .abilities hr {
+        border: none;
+        height: 1px;
+        width: 60%;
+        background-color: var(--secondary3);
+    }
+
+    .abilities .abilitiesTitle {
+        color: var(--secondary2);
+        font-family: var(--primaryfont);
+        position: relative;
+        font-weight: 1000;
+        margin-top: 1em;
+        font-size: 2.5em;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 60%;
+    }
+
+    .abilities .abilitiesSubtitles {
+        color: var(--secondary2);
+        font-family: var(--primaryfont);
+        position: relative;
+        font-weight: 500;
+        margin-top: 1em;
+        margin-bottom: 0.75em;
+        font-size: 1.75em;
+        text-align: left;
+    }
+
+    .abilities .skills {
+        width: 70%;
+        margin: auto;
+    }
+
+    .abilities table {
+        margin-top: 0em;
+        padding-bottom: 2em;
+        width: 100%;
+        font-size: 95%;
+    }
+
+    .abilities table td {
+        width: 50%;
+        transition: transform 0.2s;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 1em;
+    }
+    .abilities table td:hover {
+        transform: scale(1.05);
+        background-color: var(--secondary6);
+        box-shadow: 0.3em 0.3em 0.5em rgb(70, 70, 70);
+    }
+
+    .filled {
+        color: var(--secondary2);
+    }
+
+    .empty {
+        color: var(--secondary3);
+    }
+</style>
+<div class="abilities" id="abilities">
+    <div class="abilitiesTitle">Abilities</div>
+    <hr>
+    <div class="abilitiesInfo">
+        <div class="skills">
+        <div class="abilitiesSubtitles">Skills</div>
+            <table>
+                {% for key, value in skills.items() %}
+                    {% if loop.index % 2 == 1 %}
+                        <tr>
+                    {% endif %}
+                    <td>
+                        <span style='float:left;'>{{ key }}</span>
+                        {% for i in range(0,5)|reverse %}
+                            {% if i >= value %}
+                                <span class='fa fa-star empty' style='float:right;'></span>
+                            {% else %}
+                                <span class='fa fa-star filled' style='float:right;'></span>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    {% if loop.index % 2 == 0 %}
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+            <hr>
+            <div class="abilitiesSubtitles">Tools</div>
+            <table>
+                {% for key, value in tools.items() %}
+                    {% if loop.index % 2 == 1 %}
+                        <tr>
+                    {% endif %}
+                    <td>
+                        <span style='float:left;'>{{ key }}</span>
+                        {% for i in range(0,5)|reverse %}
+                            {% if i >= value %}
+                                <span class='fa fa-star empty' style='float:right;'></span>
+                            {% else %}
+                                <span class='fa fa-star filled' style='float:right;'></span>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    {% if loop.index % 2 == 0 %}
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+            <div class="abilitiesSubtitles">Languages</div>
+            <table>
+                {% for key, value in languages.items() %}
+                    {% if loop.index % 2 == 1 %}
+                        <tr>
+                    {% endif %}
+                    <td>
+                        <span style='float:left;'>{{ key }}</span>
+                        {% for i in range(0,5)|reverse %}
+                            {% if i >= value %}
+                                <span class='fa fa-star empty' style='float:right;'></span>
+                            {% else %}
+                                <span class='fa fa-star filled' style='float:right;'></span>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    {% if loop.index % 2 == 0 %}
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>

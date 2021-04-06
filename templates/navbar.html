@@ -1,0 +1,37 @@
+<style>
+    .floatingmenu {
+    overflow: hidden;
+    background-color: var(--secondary3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    font-family: var(--primaryfont);
+}
+
+.floatingmenu button {
+    text-decoration: none;
+    border: none;
+    float: left;
+    display: block;
+    background-color: var(--secondary3);
+    color: var(--secondary5);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.floatingmenu button:hover {
+    background-color: var(--secondary4);
+    color: var(--secondary1);
+}
+</style>
+<div class="floatingmenu">
+    <button type="button" onclick="smoothScroll(document.getElementById('title'))">Home</button>
+    <button type="button" onclick="smoothScroll(document.getElementById('aboutme'))">About</button>
+    <button type="button" onclick="smoothScroll(document.getElementById('experience'))">Experience</button>
+    <button type="button" onclick="smoothScroll(document.getElementById('abilities'))">Abilities</button>
+    <button type="button" onclick="smoothScroll(document.getElementById('contactme'))">Contact</button>
+    <button type="button" style="float:right" onclick="location.href='images/WConorMcFerren.pdf'">Resume</button>
+</div>

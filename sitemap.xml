@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -5,13 +6,19 @@
         <loc>https://www.conormcferren.com/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <lastmod>2021-01-07</lastmod>
+        <lastmod>2021-04-05</lastmod>
     </url>
     <url>
-        <loc>https://www.conormcferren.com/index.php</loc>
+        <loc>https://www.conormcferren.com/index</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <lastmod>20201-01-07</lastmod>
+        <lastmod>2021-04-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.conormcferren.com/home</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <lastmod>2021-04-05</lastmod>
     </url>
     <url>
         <loc>https://www.conormcferren.com/WConorMcFerren.pdf</loc>

@@ -1,0 +1,101 @@
+<style>
+    .contactme {
+        width: 100%;
+        background-color: var(--secondary3);
+
+        padding-top: 2em;
+        margin-left: 0em;
+        margin-right: 0em;
+        margin-top: 0em;
+
+        font-family: var(--primaryfont)
+    }
+
+    .contactme hr {
+        border: none;
+        height: 1px;
+        width: 60%;
+        background-color: var(--secondary4);
+    }
+
+    .contactme .contactmeTitle {
+        color: var(--secondary4);
+        font-family: var(--primaryfont);
+        position: relative;
+        font-weight: 1000;
+        margin-top: 1em;
+        font-size: 2.5em;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 60%;
+    }
+
+    .contactme .contactInfo {
+        padding-top: 2em;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 500;
+        font-size: 90%;
+
+        letter-spacing: 2px;
+    }
+    .contactme .contactInfo a {
+        text-decoration: none;
+        font-size: 1.1em;
+        color: var(--secondary4);
+    }
+
+    .contactme .contactInfo li {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        width: fit-content;
+    }
+
+    .contactme .contactInfo ul {
+        list-style-type: none;
+        text-align: left;
+        white-space: nowrap;
+        overflow: visible;
+        margin: auto;
+        width: 10em;
+    }
+
+    .contactme .contactInfo img {
+        height: 1.2em;
+        color: var(--secondary4);
+    }
+
+    .contactme .contactInfo a:hover{
+        color: var(--secondary5);
+    }
+
+    .contactme .copyright {
+        padding-top: 5em;
+        padding-bottom: 2em;
+        font-weight: 500;
+        font-size: 70%;
+        color: var(--secondary4);
+        text-align: center;
+        letter-spacing: 2px;
+    }
+</style>
+<div class="contactme" id="contactme">
+    <div class="contactmeTitle">Contact Information</div>
+    <hr>
+    <div class="contactInfo">
+        <ul>
+            <li><a href="https://linkedin.com/in/w-conor-mcferren"><img src="{{url_for('static',filename='images/linkedin.svg')}}" alt="LinkedIn"> LinkedIn</a></li>
+            <li><a href="https://instagram.com/cnmcferren"><img src="{{url_for('static',filename='images/instagram.svg')}}" alt="Instagram"> Instagram</a></li>
+            <li><a href="https://www.qrz.com/db/kn4sit"><img src="{{url_for('static',filename='images/radio.svg')}}" alt="QRZ"> QRZ</a></li>
+            <li><a href="mailto:cnmcferren@gmail.com"><img src="{{url_for('static',filename='images/email.svg')}}" alt="Email"> Email</a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        Copyright &copy 2021 W. Conor McFerren. All Rights Reserved.
+    </div>
+</div>
