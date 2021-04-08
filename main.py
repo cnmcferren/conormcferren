@@ -34,6 +34,7 @@ def index():
         return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
     except Exception as e:
         print(e, file=sys.stderr)
+        return render_template('error.html', errorMessage=e)
 
 @app.errorhandler(404)
 def page_not_found(error):
