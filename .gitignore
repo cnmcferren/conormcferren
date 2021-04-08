@@ -1,3 +1,6 @@
 .DS_Store
 credentials.txt
 .htaccess
+phpinfo.php
+*.pyc
+__pycache__/

@@ -1,6 +1,9 @@
+#!/home1/conormcf/venv/conormcferren/bin/python3
+
 from flask import Flask, render_template, request, send_from_directory, redirect, url_for, session
 import databaseconnector
 from experience import Experience
+from waitress import serve
 
 app = Flask(__name__, 
     static_url_path='', 
@@ -26,11 +29,13 @@ def index():
                                 )
         experienceStructs.append(newStruct)
 
-    return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
+    #return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return '404' # render_template('404.html'), 404
+    render_template('404.html')
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=3000)
+    app.run(host='0.0.0.0', port=3000)
+	#serve(app, host='0.0.0.0', port=5000)
+	#app.run()
