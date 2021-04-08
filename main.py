@@ -15,28 +15,22 @@ app = Flask(__name__,
 @app.route('/index')
 @app.route('/home')
 def index():
-    return render_template('error.html', errorMessage="Success")
-    #try:
-        # skills = dict(databaseconnector.query("SELECT title, rating FROM skills"))
-        # tools = dict(databaseconnector.query("SELECT title, rating FROM tools"))
-        # languages = dict(databaseconnector.query("SELECT title, rating FROM languages"))
-        # experience = databaseconnector.query("SELECT title, dates, shortDescription, longDescription, image, id FROM experience")
-        # experienceStructs = []
-        # for line in experience:
-        #     newStruct = Experience(line[0],
-        #                             line[1],
-        #                             line[2],
-        #                             line[3],
-        #                             line[4],
-        #                             'a' + str(line[5])
-        #                             )
-        #     experienceStructs.append(newStruct)
+         skills = dict(databaseconnector.query("SELECT title, rating FROM skills"))
+         tools = dict(databaseconnector.query("SELECT title, rating FROM tools"))
+         languages = dict(databaseconnector.query("SELECT title, rating FROM languages"))
+         experience = databaseconnector.query("SELECT title, dates, shortDescription, longDescription, image, id FROM experience")
+         experienceStructs = []
+         for line in experience:
+             newStruct = Experience(line[0],
+                                     line[1],
+                                     line[2],
+                                     line[3],
+                                     line[4],
+                                     'a' + str(line[5])
+                                     )
+             experienceStructs.append(newStruct)
 
-        # return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
-    #     return render_template('error.html', errorMessage="Success")
-    # except Exception as e:
-    #     print(e, file=sys.stderr)
-    #     return render_template('error.html', errorMessage=e)
+         return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
 
 @app.errorhandler(404)
 def page_not_found(error):
