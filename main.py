@@ -15,7 +15,8 @@ app = Flask(__name__,
 @app.route('/index')
 @app.route('/home')
 def index():
-    try:
+    return render_template('error.html', errorMessage="Success")
+    #try:
         # skills = dict(databaseconnector.query("SELECT title, rating FROM skills"))
         # tools = dict(databaseconnector.query("SELECT title, rating FROM tools"))
         # languages = dict(databaseconnector.query("SELECT title, rating FROM languages"))
@@ -32,10 +33,10 @@ def index():
         #     experienceStructs.append(newStruct)
 
         # return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
-        return render_template('error.html', errorMessage="Success")
-    except Exception as e:
-        print(e, file=sys.stderr)
-        return render_template('error.html', errorMessage=e)
+    #     return render_template('error.html', errorMessage="Success")
+    # except Exception as e:
+    #     print(e, file=sys.stderr)
+    #     return render_template('error.html', errorMessage=e)
 
 @app.errorhandler(404)
 def page_not_found(error):
