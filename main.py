@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, send_from_directory, redirect, url_for, session
 import databaseconnector
 from experience import Experience
+from waitress import serve
 
 app = Flask(__name__, 
     static_url_path='', 
@@ -33,4 +34,5 @@ def page_not_found(error):
     return '404' # render_template('404.html'), 404
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=3000)
+    #app.run(host='127.0.0.1', port=3000)
+    serve(app, host='127.0.0.1', port=3000)
