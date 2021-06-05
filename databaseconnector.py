@@ -26,19 +26,22 @@ else:
 CURSOR = database.cursor()
 
 def query(query, data = None):
-    if data:
-        if type(data) is not tuple:
-            data = (data,)
-        CURSOR.execute(query, data)
-    else:
-        CURSOR.execute(query)
+    try:
+        if data:
+            if type(data) is not tuple:
+                data = (data,)
+            CURSOR.execute(query, data)
+        else:
+            CURSOR.execute(query)
     
-    # Return as list instead of having to deal with CURSOR
-    returnVals = []
-    for item in CURSOR:
-        returnVals.append(item)    
-        
-    return returnVals
+        # Return as list instead of having to deal with CURSOR
+        returnVals = []
+        for item in CURSOR:
+            returnVals.append(item)    
+            
+        return returnVals
+    except Exception as e:
+        return []
 
 def commit():
     database.commit()
