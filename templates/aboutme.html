@@ -83,9 +83,17 @@
             <div class="infoHeaders">Name:</div>
             <div>William Conor McFerren</div><br>
             <div class="infoHeaders">Age:</div>
-            <div>21 Years</div><br>
+            <div id="age"></div><br>
             <div class="infoHeaders">Location:</div>
             <div>Athens, Georgia, United States of America</div>
         </div>
     </div>
+    <script type="text/javascript">
+        var dob = new Date("05/19/1999");
+        var month_diff = Date.now() - dob.getTime();
+        var age_dt = new Date(month_diff);
+        var year = age_dt.getUTCFullYear(); 
+        var age = Math.abs(year - 1970);
+        document.getElementById("age").innerHTML = age.toString() + " Years";
+    </script>
 </div>
