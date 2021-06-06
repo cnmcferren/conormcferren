@@ -29,6 +29,7 @@ def index():
                                 )
         experienceStructs.append(newStruct)
 
+    databaseconnector.close()
     return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
 
 @app.errorhandler(404)

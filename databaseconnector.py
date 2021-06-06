@@ -46,6 +46,8 @@ def query(query, data = None):
 def commit():
     database.commit()
 
+def close():
+    database.close()
 
 # Set the default database
 query("use `conormcf_personal`")
