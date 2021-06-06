@@ -14,10 +14,11 @@ app = Flask(__name__,
 @app.route('/index')
 @app.route('/home')
 def index():
-    skills = dict(databaseconnector.query("SELECT title, rating FROM skills"))
-    tools = dict(databaseconnector.query("SELECT title, rating FROM tools"))
-    languages = dict(databaseconnector.query("SELECT title, rating FROM languages"))
-    experience = databaseconnector.query("SELECT title, dates, shortDescription, longDescription, image, id FROM experience")
+    database = databaseconnector.databaseObject()
+    skills = dict(database.query("SELECT title, rating FROM skills"))
+    tools = dict(database.query("SELECT title, rating FROM tools"))
+    languages = dict(database.query("SELECT title, rating FROM languages"))
+    experience = database.query("SELECT title, dates, shortDescription, longDescription, image, id FROM experience")
     experienceStructs = []
     for line in experience:
         newStruct = Experience(line[0],
@@ -29,7 +30,7 @@ def index():
                                 )
         experienceStructs.append(newStruct)
 
-    databaseconnector.close()
+    database.close()
     return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
 
 @app.errorhandler(404)
@@ -37,6 +38,6 @@ def page_not_found(error):
     render_template('404.html')
 
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0', threaded=True)
-	serve(app, host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', threaded=True)
+	#serve(app, host='0.0.0.0', port=5000)
 	#app.run()
