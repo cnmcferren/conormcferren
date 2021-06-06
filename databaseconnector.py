@@ -47,7 +47,6 @@ class databaseObject:
                 
             return returnVals
         except Exception as e:
-            print(e)
             return []
 
     def commit(self):
