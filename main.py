@@ -29,6 +29,7 @@ def index():
                                 )
         experienceStructs.append(newStruct)
 
+    databaseconnector.close()
     return render_template('index.html', skills=skills, tools=tools, languages=languages, experiences=experienceStructs)
 
 @app.errorhandler(404)
@@ -36,6 +37,6 @@ def page_not_found(error):
     render_template('404.html')
 
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0', port=3000)
+    #app.run(host='0.0.0.0', threaded=True)
 	serve(app, host='0.0.0.0', port=5000)
 	#app.run()
