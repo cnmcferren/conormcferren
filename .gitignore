@@ -4,3 +4,4 @@ credentials.txt
 phpinfo.php
 *.pyc
 __pycache__/
+record.log
