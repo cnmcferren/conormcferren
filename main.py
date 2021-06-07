@@ -1,20 +1,24 @@
 #!/home1/conormcf/venv/conormcferren/bin/python3
 
-from flask import Flask, render_template, request, send_from_directory, redirect, url_for, session
+from flask import Flask, render_template, request, send_from_directory, redirect, url_for, session, request
 import databaseconnector
 from experience import Experience
 from waitress import serve
+import logging
 
 app = Flask(__name__, 
     static_url_path='', 
     static_folder='static', 
     template_folder='templates')
 
+logging.basicConfig(filename='record.log', level=logging.DEBUG, format='%(asctime)s [%(levelname)s] %(name)s-%(threadName)s : %(message)s')
+
 @app.route('/')
 @app.route('/index')
 @app.route('/home')
 def index():
-    database = databaseconnector.databaseObject()
+    app.logger.info("Connection from %s" % str(request.environ['REMOTE_ADDR']))
+    database = databaseconnector.databaseObject(app)
     skills = dict(database.query("SELECT title, rating FROM skills"))
     tools = dict(database.query("SELECT title, rating FROM tools"))
     languages = dict(database.query("SELECT title, rating FROM languages"))
@@ -35,9 +39,10 @@ def index():
 
 @app.errorhandler(404)
 def page_not_found(error):
+    app.logger.info("404")
     render_template('404.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True)
-	#serve(app, host='0.0.0.0', port=5000)
+    #app.run(host='0.0.0.0', threaded=True)
+	serve(app, host='0.0.0.0', port=5000, threads=6)
 	#app.run()

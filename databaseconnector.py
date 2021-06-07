@@ -2,9 +2,10 @@ import mysql.connector
 from mysql.connector import errorcode
 
 class databaseObject:
-    def __init__(self):
+    def __init__(self, app):
         self.CURSOR = 0
         self.database = 0
+        self.app = app
         self.connect()
         self.query("use `conormcf_personal`")
 
@@ -21,13 +22,13 @@ class databaseObject:
                 host = hostid)
         except mysql.connector.Error as err:
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
-                print("Invalid credentials")
+                self.app.logger.warning("Invalid credentials")
             elif err.errno == errorcode.ER_BAD_DB_ERROR:
-                print("Database does not exist")
+                self.app.logger.warning("Database does not exist")
             else:
-                print(err)
+                self.app.logger.warning(err)
         else:
-            print("Database Connection Established")
+            pass
 
         self.CURSOR = self.database.cursor()
 
@@ -47,6 +48,7 @@ class databaseObject:
                 
             return returnVals
         except Exception as e:
+            self.app.logger.warning(e)
             return []
 
     def commit(self):
